@@ -42,7 +42,7 @@ function loadingAnimation() {
         opacity: 0
     })
     tl.from("#hero-1 h1, #hero-2 h1, #hero-3 h2, #hero-3 h3, #hero-4 h1", {
-        y:120,
+        y:140,
         stagger: 0.2
     })
 }
