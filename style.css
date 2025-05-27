@@ -43,6 +43,12 @@ body {
     mix-blend-mode: difference;
     transform: translate(-50%, -50%);
 } */
+.mousefollower {
+    border: 2px solid #fff;
+    background-color: #fff;
+    scale: 2;
+    mix-blend-mode: difference;
+}
 #loader {
     height: 100%;
     width: 100%;
@@ -197,20 +203,23 @@ body {
     position: relative;
     left: 27%;
     background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg);
+    background-size: cover;
+    background-position: center;
 }
-
+/* 
 #video-container img {
     position: absolute;
     height: 100%;
     width: 100%;
     object-fit: cover;
     top: 0;
-}
+} */
 
 #video-container video {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    opacity: 0;
 }
 
 #video-cursor {
@@ -516,7 +525,28 @@ body {
     text-transform: uppercase;
     position: relative;
 }
-#footer h1::before {
+#footer-text {
+    position: relative;
+}
+
+#footer-text h2 {
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: absolute;
+    top: -10%;
+    font-weight: 500;
+    left: 0;
+    font-family: "silk serif";
+}
+
+#footer-text h2 span {
+    font-family: "silk serif";
+    opacity: 0;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+}
+
+#footer-text::before {
     content: "04";
     position: absolute;
     font-size: 3vw;
@@ -533,9 +563,15 @@ body {
 }
 
 #footer-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding-right: 15vw;
     padding-top: 3vw;
     padding-bottom: 3vw;
@@ -558,4 +594,13 @@ body {
 ._canvas_container {
     z-index: 999999 !important;
     pointer-events: none;
+}
+
+#flag {
+    height: 25vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translate(-50%, -50%);
 }
